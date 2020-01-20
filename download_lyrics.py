@@ -7,13 +7,9 @@ Created on Wed Jun 19 14:14:48 2019
 
 import lyricsgenius
 
+genius = lyricsgenius.Genius("BBMypsrFRNrEd68cKEkY7hLODx1wAOZ-1GfV8lOpKEdad4guY1Svo-1oB86T0fbE") #here goes your API key from Genius
 
-######################################3  
-
-genius = lyricsgenius.Genius("BBMypsrFRNrEd68cKEkY7hLODx1wAOZ-1GfV8lOpKEdad4guY1Svo-1oB86T0fbE")
-
-
-filename = 'REGGETON1.txt'
+filename = 'REGGETON_artists.txt'
 with open(filename, encoding='utf-8') as f:
     reggeton_list = f.readlines()
 
@@ -63,4 +59,4 @@ df = df.fillna('No info')
 df111 = df[~df.title.str.contains('duplicada')]
 df222= df111[~df111.title.str.contains('duplicado')]
 
-df222.to_csv("REGGETON.csv", sep=';', encoding='utf-8', index=False)
+df222.to_csv("all_songs.csv", sep=';', encoding='utf-8', index=False)
